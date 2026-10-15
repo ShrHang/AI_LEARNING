@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "completed_at_utc": "2026-10-13T09:04:29.455403+00:00",
+  "random_state": 42,
+  "cv_folds": 5,
+  "jobs": 2,
+  "train_sha256": "484667d165458da7f73ba36d172d67e14864e1aa5ab1ee6262e2966dd295c863",
+  "test_sha256": "4882c04b008c055f351f1c9b25c45d601a454077af37e79375601f2465b41615",
+  "main_source_sha256": "759b959ef51abf0d8b219e2e0aadab3c66ba1d24f7a1f0e18633084ad0e31d44",
+  "tune_source_sha256": "cacb01f7f817104eeb6be05ae4babefed3ba85d1d32d3cc8a23c03ce2754ebd4",
+  "finalize_source_sha256": "250159895a725c06d46eca0028606ea8f4c62decb5bfe60b65f1517c531ced78",
+  "selected_candidate": {
+    "candidate_id": "convergence__word_1_1_55k_sublinear__LogisticRegression__C_100",
+    "vectorizer": {
+      "analyzer": "word",
+      "ngram_range": [
+        1,
+        1
+      ],
+      "max_features": 55000,
+      "min_df": 1,
+      "sublinear_tf": true
+    },
+    "classifier": "LogisticRegression",
+    "C": 100.0
+  },
+  "training_samples": 7368,
+  "test_samples": 2457,
+  "actual_features": 55000,
+  "prediction_sha256": "6e48cc0504cbf57f22404d7bc74f8f97bed910a81858d4fe5fee8ad33317a02e"
+}

@@ -1,0 +1,30 @@
+{
+  "candidate": {
+    "candidate_id": "regularization__word_1_1_20k_sublinear__LogisticRegression__C_30",
+    "vectorizer": {
+      "analyzer": "word",
+      "ngram_range": [
+        1,
+        1
+      ],
+      "max_features": 20000,
+      "min_df": 1,
+      "sublinear_tf": true
+    },
+    "classifier": "LogisticRegression",
+    "C": 30.0
+  },
+  "cv_metrics": {
+    "candidate_id": "regularization__word_1_1_20k_sublinear__LogisticRegression__C_30",
+    "C": 30.0,
+    "vectorizer": "{\"analyzer\": \"word\", \"max_features\": 20000, \"min_df\": 1, \"ngram_range\": [1, 1], \"sublinear_tf\": true}",
+    "wall_time_seconds": 13.057519048000358,
+    "accuracy_mean": 0.9383833471045071,
+    "accuracy_std": 0.008525836190641328,
+    "train_accuracy_mean": 0.9998642745040816,
+    "macro_f1_mean": 0.9386536870657263,
+    "macro_f1_std": 0.008467809996529956,
+    "train_macro_f1_mean": 0.9998644640399416
+  },
+  "selection_rule": "highest macro_f1_mean, then lowest macro_f1_std, then candidate_id"
+}

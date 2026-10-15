@@ -1,0 +1,27 @@
+{
+  "candidate": {
+    "candidate_id": "convergence__word_1_1_55k_sublinear__LogisticRegression__C_100",
+    "vectorizer": {
+      "analyzer": "word",
+      "ngram_range": [
+        1,
+        1
+      ],
+      "max_features": 55000,
+      "min_df": 1,
+      "sublinear_tf": true
+    },
+    "classifier": "LogisticRegression",
+    "C": 100.0
+  },
+  "selection_rule": "best mean Macro-F1 across completed tuning rounds",
+  "cv_metrics": {
+    "round": "convergence",
+    "candidate_id": "convergence__word_1_1_55k_sublinear__LogisticRegression__C_100",
+    "macro_f1_mean": 0.9429145202877276,
+    "macro_f1_std": 0.005065172551575532,
+    "accuracy_mean": 0.9427259186386158,
+    "accuracy_std": 0.005081621070309284
+  },
+  "stopping_rule": "stop after a completed round improves mean Macro-F1 by less than 0.001"
+}

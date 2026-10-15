@@ -1,0 +1,13 @@
+2026-10-13 16:49:09,464 INFO Candidate 1/6: regularization__word_1_1_20k_sublinear__LogisticRegression__C_2
+2026-10-13 16:49:22,269 INFO Macro-F1 0.9314 ± 0.0076; Accuracy 0.9311
+2026-10-13 16:49:22,269 INFO Candidate 2/6: regularization__word_1_1_20k_sublinear__LogisticRegression__C_5
+2026-10-13 16:49:34,371 INFO Macro-F1 0.9353 ± 0.0082; Accuracy 0.9350
+2026-10-13 16:49:34,371 INFO Candidate 3/6: regularization__word_1_1_20k_sublinear__LogisticRegression__C_15
+2026-10-13 16:49:47,616 INFO Macro-F1 0.9385 ± 0.0082; Accuracy 0.9382
+2026-10-13 16:49:47,616 INFO Candidate 4/6: regularization__word_1_1_20k_sublinear__LogisticRegression__C_30
+2026-10-13 16:50:00,677 INFO Macro-F1 0.9387 ± 0.0085; Accuracy 0.9384
+2026-10-13 16:50:00,677 INFO Candidate 5/6: regularization__word_1_1_20k_sublinear__LogisticRegression__C_50
+2026-10-13 16:50:13,763 INFO Macro-F1 0.9384 ± 0.0090; Accuracy 0.9381
+2026-10-13 16:50:13,764 INFO Candidate 6/6: regularization__word_1_1_20k_sublinear__LogisticRegression__C_100
+2026-10-13 16:50:25,802 INFO Macro-F1 0.9384 ± 0.0085; Accuracy 0.9381
+2026-10-13 16:50:25,807 INFO Tuning round completed: regularization

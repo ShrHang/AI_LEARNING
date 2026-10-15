@@ -1,0 +1,63 @@
+2026-10-13 15:54:34,148 INFO 7368 labeled rows; 30 candidates; 5 folds
+2026-10-13 15:54:34,149 INFO Candidate 1/30: unigram_5k__MultinomialNB__alpha_0.1
+2026-10-13 15:54:42,983 INFO Macro-F1 0.8984 ± 0.0109; Accuracy 0.8975
+2026-10-13 15:54:42,983 INFO Candidate 2/30: unigram_5k__MultinomialNB__alpha_0.5
+2026-10-13 15:54:51,975 INFO Macro-F1 0.8951 ± 0.0092; Accuracy 0.8944
+2026-10-13 15:54:51,976 INFO Candidate 3/30: unigram_5k__MultinomialNB__alpha_1
+2026-10-13 15:55:00,951 INFO Macro-F1 0.8927 ± 0.0094; Accuracy 0.8922
+2026-10-13 15:55:00,951 INFO Candidate 4/30: unigram_5k__SVC__C_0.1
+2026-10-13 16:01:14,874 INFO Macro-F1 0.8363 ± 0.0079; Accuracy 0.8280
+2026-10-13 16:01:14,874 INFO Candidate 5/30: unigram_5k__SVC__C_1
+2026-10-13 16:04:51,290 INFO Macro-F1 0.9033 ± 0.0060; Accuracy 0.9026
+2026-10-13 16:04:51,290 INFO Candidate 6/30: unigram_5k__SVC__C_10
+2026-10-13 16:08:23,205 INFO Macro-F1 0.9035 ± 0.0090; Accuracy 0.9030
+2026-10-13 16:08:23,205 INFO Candidate 7/30: unigram_5k__LogisticRegression__C_0.1
+2026-10-13 16:08:31,429 INFO Macro-F1 0.8552 ± 0.0074; Accuracy 0.8545
+2026-10-13 16:08:31,429 INFO Candidate 8/30: unigram_5k__LogisticRegression__C_1
+2026-10-13 16:08:40,837 INFO Macro-F1 0.9008 ± 0.0102; Accuracy 0.9002
+2026-10-13 16:08:40,837 INFO Candidate 9/30: unigram_5k__LogisticRegression__C_10
+2026-10-13 16:08:51,259 INFO Macro-F1 0.9104 ± 0.0100; Accuracy 0.9099
+2026-10-13 16:08:51,259 INFO Candidate 10/30: unigram_5k__LogisticRegression__C_20
+2026-10-13 16:09:01,591 INFO Macro-F1 0.9092 ± 0.0102; Accuracy 0.9087
+2026-10-13 16:09:01,591 INFO Candidate 11/30: unigram_20k__MultinomialNB__alpha_0.1
+2026-10-13 16:09:09,223 INFO Macro-F1 0.9258 ± 0.0095; Accuracy 0.9254
+2026-10-13 16:09:09,223 INFO Candidate 12/30: unigram_20k__MultinomialNB__alpha_0.5
+2026-10-13 16:09:16,720 INFO Macro-F1 0.9210 ± 0.0087; Accuracy 0.9207
+2026-10-13 16:09:16,720 INFO Candidate 13/30: unigram_20k__MultinomialNB__alpha_1
+2026-10-13 16:09:24,188 INFO Macro-F1 0.9141 ± 0.0067; Accuracy 0.9141
+2026-10-13 16:09:24,188 INFO Candidate 14/30: unigram_20k__SVC__C_0.1
+2026-10-13 16:16:36,054 INFO Macro-F1 0.8244 ± 0.0062; Accuracy 0.8113
+2026-10-13 16:16:36,055 INFO Candidate 15/30: unigram_20k__SVC__C_1
+2026-10-13 16:21:28,997 INFO Macro-F1 0.9244 ± 0.0055; Accuracy 0.9239
+2026-10-13 16:21:28,997 INFO Candidate 16/30: unigram_20k__SVC__C_10
+2026-10-13 16:26:39,066 INFO Macro-F1 0.9249 ± 0.0069; Accuracy 0.9244
+2026-10-13 16:26:39,066 INFO Candidate 17/30: unigram_20k__LogisticRegression__C_0.1
+2026-10-13 16:26:48,301 INFO Macro-F1 0.8749 ± 0.0047; Accuracy 0.8738
+2026-10-13 16:26:48,301 INFO Candidate 18/30: unigram_20k__LogisticRegression__C_1
+2026-10-13 16:27:00,317 INFO Macro-F1 0.9205 ± 0.0097; Accuracy 0.9201
+2026-10-13 16:27:00,317 INFO Candidate 19/30: unigram_20k__LogisticRegression__C_10
+2026-10-13 16:27:13,973 INFO Macro-F1 0.9312 ± 0.0084; Accuracy 0.9309
+2026-10-13 16:27:13,973 INFO Candidate 20/30: unigram_20k__LogisticRegression__C_20
+2026-10-13 16:27:26,521 INFO Macro-F1 0.9313 ± 0.0081; Accuracy 0.9311
+2026-10-13 16:27:26,521 INFO Candidate 21/30: unigram_20k_sublinear__MultinomialNB__alpha_0.1
+2026-10-13 16:27:34,061 INFO Macro-F1 0.9290 ± 0.0113; Accuracy 0.9286
+2026-10-13 16:27:34,062 INFO Candidate 22/30: unigram_20k_sublinear__MultinomialNB__alpha_0.5
+2026-10-13 16:27:41,801 INFO Macro-F1 0.9225 ± 0.0101; Accuracy 0.9221
+2026-10-13 16:27:41,801 INFO Candidate 23/30: unigram_20k_sublinear__MultinomialNB__alpha_1
+2026-10-13 16:27:49,445 INFO Macro-F1 0.9188 ± 0.0098; Accuracy 0.9184
+2026-10-13 16:27:49,445 INFO Candidate 24/30: unigram_20k_sublinear__SVC__C_0.1
+2026-10-13 16:35:08,677 INFO Macro-F1 0.8580 ± 0.0091; Accuracy 0.8503
+2026-10-13 16:35:08,677 INFO Candidate 25/30: unigram_20k_sublinear__SVC__C_1
+2026-10-13 16:40:15,122 INFO Macro-F1 0.9331 ± 0.0073; Accuracy 0.9327
+2026-10-13 16:40:15,122 INFO Candidate 26/30: unigram_20k_sublinear__SVC__C_10
+2026-10-13 16:45:35,007 INFO Macro-F1 0.9351 ± 0.0067; Accuracy 0.9347
+2026-10-13 16:45:35,007 INFO Candidate 27/30: unigram_20k_sublinear__LogisticRegression__C_0.1
+2026-10-13 16:45:43,815 INFO Macro-F1 0.9018 ± 0.0056; Accuracy 0.9012
+2026-10-13 16:45:43,815 INFO Candidate 28/30: unigram_20k_sublinear__LogisticRegression__C_1
+2026-10-13 16:45:54,995 INFO Macro-F1 0.9270 ± 0.0068; Accuracy 0.9266
+2026-10-13 16:45:54,995 INFO Candidate 29/30: unigram_20k_sublinear__LogisticRegression__C_10
+2026-10-13 16:46:08,755 INFO Macro-F1 0.9370 ± 0.0086; Accuracy 0.9368
+2026-10-13 16:46:08,755 INFO Candidate 30/30: unigram_20k_sublinear__LogisticRegression__C_20
+2026-10-13 16:46:21,339 INFO Macro-F1 0.9381 ± 0.0087; Accuracy 0.9378
+2026-10-13 16:46:21,893 INFO Generating selected candidate's out-of-fold diagnostics
+2026-10-13 16:46:32,200 INFO Requested stage completed: compare

@@ -1,0 +1,242 @@
+{
+  "round": "joint",
+  "status": "complete",
+  "started_at_utc": "2026-10-13T08:53:35.406990+00:00",
+  "random_state": 42,
+  "cv_folds": 5,
+  "jobs": 2,
+  "based_on": "Feature-round best: 50k word unigrams, sublinear TF, C=30",
+  "train_sha256": "484667d165458da7f73ba36d172d67e14864e1aa5ab1ee6262e2966dd295c863",
+  "initial_splits_sha256": "48833dffcf5fb279b149b0d6bb6fb8ec97295c71ad48124d2eaf127d015cbcd5",
+  "source_sha256": "8e9c4e13e1e9750e73f17108a01ace8cd38b96e0cb8c4fafb078d1430591bf51",
+  "candidates": [
+    {
+      "candidate_id": "joint__word_1_1_40k_sublinear__LogisticRegression__C_20",
+      "vectorizer": {
+        "analyzer": "word",
+        "ngram_range": [
+          1,
+          1
+        ],
+        "max_features": 40000,
+        "min_df": 1,
+        "sublinear_tf": true
+      },
+      "classifier": "LogisticRegression",
+      "C": 20.0
+    },
+    {
+      "candidate_id": "joint__word_1_1_40k_sublinear__LogisticRegression__C_30",
+      "vectorizer": {
+        "analyzer": "word",
+        "ngram_range": [
+          1,
+          1
+        ],
+        "max_features": 40000,
+        "min_df": 1,
+        "sublinear_tf": true
+      },
+      "classifier": "LogisticRegression",
+      "C": 30.0
+    },
+    {
+      "candidate_id": "joint__word_1_1_40k_sublinear__LogisticRegression__C_40",
+      "vectorizer": {
+        "analyzer": "word",
+        "ngram_range": [
+          1,
+          1
+        ],
+        "max_features": 40000,
+        "min_df": 1,
+        "sublinear_tf": true
+      },
+      "classifier": "LogisticRegression",
+      "C": 40.0
+    },
+    {
+      "candidate_id": "joint__word_1_1_40k_sublinear__LogisticRegression__C_60",
+      "vectorizer": {
+        "analyzer": "word",
+        "ngram_range": [
+          1,
+          1
+        ],
+        "max_features": 40000,
+        "min_df": 1,
+        "sublinear_tf": true
+      },
+      "classifier": "LogisticRegression",
+      "C": 60.0
+    },
+    {
+      "candidate_id": "joint__word_1_1_50k_sublinear__LogisticRegression__C_20",
+      "vectorizer": {
+        "analyzer": "word",
+        "ngram_range": [
+          1,
+          1
+        ],
+        "max_features": 50000,
+        "min_df": 1,
+        "sublinear_tf": true
+      },
+      "classifier": "LogisticRegression",
+      "C": 20.0
+    },
+    {
+      "candidate_id": "joint__word_1_1_50k_sublinear__LogisticRegression__C_40",
+      "vectorizer": {
+        "analyzer": "word",
+        "ngram_range": [
+          1,
+          1
+        ],
+        "max_features": 50000,
+        "min_df": 1,
+        "sublinear_tf": true
+      },
+      "classifier": "LogisticRegression",
+      "C": 40.0
+    },
+    {
+      "candidate_id": "joint__word_1_1_50k_sublinear__LogisticRegression__C_60",
+      "vectorizer": {
+        "analyzer": "word",
+        "ngram_range": [
+          1,
+          1
+        ],
+        "max_features": 50000,
+        "min_df": 1,
+        "sublinear_tf": true
+      },
+      "classifier": "LogisticRegression",
+      "C": 60.0
+    },
+    {
+      "candidate_id": "joint__word_1_1_60k_sublinear__LogisticRegression__C_20",
+      "vectorizer": {
+        "analyzer": "word",
+        "ngram_range": [
+          1,
+          1
+        ],
+        "max_features": 60000,
+        "min_df": 1,
+        "sublinear_tf": true
+      },
+      "classifier": "LogisticRegression",
+      "C": 20.0
+    },
+    {
+      "candidate_id": "joint__word_1_1_60k_sublinear__LogisticRegression__C_30",
+      "vectorizer": {
+        "analyzer": "word",
+        "ngram_range": [
+          1,
+          1
+        ],
+        "max_features": 60000,
+        "min_df": 1,
+        "sublinear_tf": true
+      },
+      "classifier": "LogisticRegression",
+      "C": 30.0
+    },
+    {
+      "candidate_id": "joint__word_1_1_60k_sublinear__LogisticRegression__C_40",
+      "vectorizer": {
+        "analyzer": "word",
+        "ngram_range": [
+          1,
+          1
+        ],
+        "max_features": 60000,
+        "min_df": 1,
+        "sublinear_tf": true
+      },
+      "classifier": "LogisticRegression",
+      "C": 40.0
+    },
+    {
+      "candidate_id": "joint__word_1_1_60k_sublinear__LogisticRegression__C_60",
+      "vectorizer": {
+        "analyzer": "word",
+        "ngram_range": [
+          1,
+          1
+        ],
+        "max_features": 60000,
+        "min_df": 1,
+        "sublinear_tf": true
+      },
+      "classifier": "LogisticRegression",
+      "C": 60.0
+    },
+    {
+      "candidate_id": "joint__word_1_1_80k_sublinear__LogisticRegression__C_20",
+      "vectorizer": {
+        "analyzer": "word",
+        "ngram_range": [
+          1,
+          1
+        ],
+        "max_features": 80000,
+        "min_df": 1,
+        "sublinear_tf": true
+      },
+      "classifier": "LogisticRegression",
+      "C": 20.0
+    },
+    {
+      "candidate_id": "joint__word_1_1_80k_sublinear__LogisticRegression__C_30",
+      "vectorizer": {
+        "analyzer": "word",
+        "ngram_range": [
+          1,
+          1
+        ],
+        "max_features": 80000,
+        "min_df": 1,
+        "sublinear_tf": true
+      },
+      "classifier": "LogisticRegression",
+      "C": 30.0
+    },
+    {
+      "candidate_id": "joint__word_1_1_80k_sublinear__LogisticRegression__C_40",
+      "vectorizer": {
+        "analyzer": "word",
+        "ngram_range": [
+          1,
+          1
+        ],
+        "max_features": 80000,
+        "min_df": 1,
+        "sublinear_tf": true
+      },
+      "classifier": "LogisticRegression",
+      "C": 40.0
+    },
+    {
+      "candidate_id": "joint__word_1_1_80k_sublinear__LogisticRegression__C_60",
+      "vectorizer": {
+        "analyzer": "word",
+        "ngram_range": [
+          1,
+          1
+        ],
+        "max_features": 80000,
+        "min_df": 1,
+        "sublinear_tf": true
+      },
+      "classifier": "LogisticRegression",
+      "C": 60.0
+    }
+  ],
+  "completed_at_utc": "2026-10-13T08:58:35.540867+00:00",
+  "best_candidate_id": "joint__word_1_1_50k_sublinear__LogisticRegression__C_60",
+  "best_macro_f1_mean": 0.9422681450102411
+}

@@ -1,0 +1,1524 @@
+{
+  "started_at_utc": "2026-10-13T07:54:34.126835+00:00",
+  "status": "comparison_complete",
+  "random_state": 42,
+  "cv_folds": 5,
+  "jobs": 2,
+  "std_ddof": 0,
+  "selection_metric": "macro_f1",
+  "train_sha256": "484667d165458da7f73ba36d172d67e14864e1aa5ab1ee6262e2966dd295c863",
+  "source_sha256": "759b959ef51abf0d8b219e2e0aadab3c66ba1d24f7a1f0e18633084ad0e31d44",
+  "training_samples": 7368,
+  "class_counts": {
+    "0": 730,
+    "1": 739,
+    "2": 737,
+    "3": 742,
+    "4": 747,
+    "5": 745,
+    "6": 743,
+    "7": 738,
+    "8": 742,
+    "9": 705
+  },
+  "candidates": [
+    {
+      "candidate_id": "unigram_5k__MultinomialNB__alpha_0.1",
+      "feature_config": {
+        "config_id": "unigram_5k",
+        "max_features": 5000,
+        "sublinear_tf": false
+      },
+      "model": "MultinomialNB",
+      "parameters": {
+        "alpha": 0.1
+      }
+    },
+    {
+      "candidate_id": "unigram_5k__MultinomialNB__alpha_0.5",
+      "feature_config": {
+        "config_id": "unigram_5k",
+        "max_features": 5000,
+        "sublinear_tf": false
+      },
+      "model": "MultinomialNB",
+      "parameters": {
+        "alpha": 0.5
+      }
+    },
+    {
+      "candidate_id": "unigram_5k__MultinomialNB__alpha_1",
+      "feature_config": {
+        "config_id": "unigram_5k",
+        "max_features": 5000,
+        "sublinear_tf": false
+      },
+      "model": "MultinomialNB",
+      "parameters": {
+        "alpha": 1.0
+      }
+    },
+    {
+      "candidate_id": "unigram_5k__SVC__C_0.1",
+      "feature_config": {
+        "config_id": "unigram_5k",
+        "max_features": 5000,
+        "sublinear_tf": false
+      },
+      "model": "SVC",
+      "parameters": {
+        "C": 0.1
+      }
+    },
+    {
+      "candidate_id": "unigram_5k__SVC__C_1",
+      "feature_config": {
+        "config_id": "unigram_5k",
+        "max_features": 5000,
+        "sublinear_tf": false
+      },
+      "model": "SVC",
+      "parameters": {
+        "C": 1.0
+      }
+    },
+    {
+      "candidate_id": "unigram_5k__SVC__C_10",
+      "feature_config": {
+        "config_id": "unigram_5k",
+        "max_features": 5000,
+        "sublinear_tf": false
+      },
+      "model": "SVC",
+      "parameters": {
+        "C": 10.0
+      }
+    },
+    {
+      "candidate_id": "unigram_5k__LogisticRegression__C_0.1",
+      "feature_config": {
+        "config_id": "unigram_5k",
+        "max_features": 5000,
+        "sublinear_tf": false
+      },
+      "model": "LogisticRegression",
+      "parameters": {
+        "C": 0.1
+      }
+    },
+    {
+      "candidate_id": "unigram_5k__LogisticRegression__C_1",
+      "feature_config": {
+        "config_id": "unigram_5k",
+        "max_features": 5000,
+        "sublinear_tf": false
+      },
+      "model": "LogisticRegression",
+      "parameters": {
+        "C": 1.0
+      }
+    },
+    {
+      "candidate_id": "unigram_5k__LogisticRegression__C_10",
+      "feature_config": {
+        "config_id": "unigram_5k",
+        "max_features": 5000,
+        "sublinear_tf": false
+      },
+      "model": "LogisticRegression",
+      "parameters": {
+        "C": 10.0
+      }
+    },
+    {
+      "candidate_id": "unigram_5k__LogisticRegression__C_20",
+      "feature_config": {
+        "config_id": "unigram_5k",
+        "max_features": 5000,
+        "sublinear_tf": false
+      },
+      "model": "LogisticRegression",
+      "parameters": {
+        "C": 20.0
+      }
+    },
+    {
+      "candidate_id": "unigram_20k__MultinomialNB__alpha_0.1",
+      "feature_config": {
+        "config_id": "unigram_20k",
+        "max_features": 20000,
+        "sublinear_tf": false
+      },
+      "model": "MultinomialNB",
+      "parameters": {
+        "alpha": 0.1
+      }
+    },
+    {
+      "candidate_id": "unigram_20k__MultinomialNB__alpha_0.5",
+      "feature_config": {
+        "config_id": "unigram_20k",
+        "max_features": 20000,
+        "sublinear_tf": false
+      },
+      "model": "MultinomialNB",
+      "parameters": {
+        "alpha": 0.5
+      }
+    },
+    {
+      "candidate_id": "unigram_20k__MultinomialNB__alpha_1",
+      "feature_config": {
+        "config_id": "unigram_20k",
+        "max_features": 20000,
+        "sublinear_tf": false
+      },
+      "model": "MultinomialNB",
+      "parameters": {
+        "alpha": 1.0
+      }
+    },
+    {
+      "candidate_id": "unigram_20k__SVC__C_0.1",
+      "feature_config": {
+        "config_id": "unigram_20k",
+        "max_features": 20000,
+        "sublinear_tf": false
+      },
+      "model": "SVC",
+      "parameters": {
+        "C": 0.1
+      }
+    },
+    {
+      "candidate_id": "unigram_20k__SVC__C_1",
+      "feature_config": {
+        "config_id": "unigram_20k",
+        "max_features": 20000,
+        "sublinear_tf": false
+      },
+      "model": "SVC",
+      "parameters": {
+        "C": 1.0
+      }
+    },
+    {
+      "candidate_id": "unigram_20k__SVC__C_10",
+      "feature_config": {
+        "config_id": "unigram_20k",
+        "max_features": 20000,
+        "sublinear_tf": false
+      },
+      "model": "SVC",
+      "parameters": {
+        "C": 10.0
+      }
+    },
+    {
+      "candidate_id": "unigram_20k__LogisticRegression__C_0.1",
+      "feature_config": {
+        "config_id": "unigram_20k",
+        "max_features": 20000,
+        "sublinear_tf": false
+      },
+      "model": "LogisticRegression",
+      "parameters": {
+        "C": 0.1
+      }
+    },
+    {
+      "candidate_id": "unigram_20k__LogisticRegression__C_1",
+      "feature_config": {
+        "config_id": "unigram_20k",
+        "max_features": 20000,
+        "sublinear_tf": false
+      },
+      "model": "LogisticRegression",
+      "parameters": {
+        "C": 1.0
+      }
+    },
+    {
+      "candidate_id": "unigram_20k__LogisticRegression__C_10",
+      "feature_config": {
+        "config_id": "unigram_20k",
+        "max_features": 20000,
+        "sublinear_tf": false
+      },
+      "model": "LogisticRegression",
+      "parameters": {
+        "C": 10.0
+      }
+    },
+    {
+      "candidate_id": "unigram_20k__LogisticRegression__C_20",
+      "feature_config": {
+        "config_id": "unigram_20k",
+        "max_features": 20000,
+        "sublinear_tf": false
+      },
+      "model": "LogisticRegression",
+      "parameters": {
+        "C": 20.0
+      }
+    },
+    {
+      "candidate_id": "unigram_20k_sublinear__MultinomialNB__alpha_0.1",
+      "feature_config": {
+        "config_id": "unigram_20k_sublinear",
+        "max_features": 20000,
+        "sublinear_tf": true
+      },
+      "model": "MultinomialNB",
+      "parameters": {
+        "alpha": 0.1
+      }
+    },
+    {
+      "candidate_id": "unigram_20k_sublinear__MultinomialNB__alpha_0.5",
+      "feature_config": {
+        "config_id": "unigram_20k_sublinear",
+        "max_features": 20000,
+        "sublinear_tf": true
+      },
+      "model": "MultinomialNB",
+      "parameters": {
+        "alpha": 0.5
+      }
+    },
+    {
+      "candidate_id": "unigram_20k_sublinear__MultinomialNB__alpha_1",
+      "feature_config": {
+        "config_id": "unigram_20k_sublinear",
+        "max_features": 20000,
+        "sublinear_tf": true
+      },
+      "model": "MultinomialNB",
+      "parameters": {
+        "alpha": 1.0
+      }
+    },
+    {
+      "candidate_id": "unigram_20k_sublinear__SVC__C_0.1",
+      "feature_config": {
+        "config_id": "unigram_20k_sublinear",
+        "max_features": 20000,
+        "sublinear_tf": true
+      },
+      "model": "SVC",
+      "parameters": {
+        "C": 0.1
+      }
+    },
+    {
+      "candidate_id": "unigram_20k_sublinear__SVC__C_1",
+      "feature_config": {
+        "config_id": "unigram_20k_sublinear",
+        "max_features": 20000,
+        "sublinear_tf": true
+      },
+      "model": "SVC",
+      "parameters": {
+        "C": 1.0
+      }
+    },
+    {
+      "candidate_id": "unigram_20k_sublinear__SVC__C_10",
+      "feature_config": {
+        "config_id": "unigram_20k_sublinear",
+        "max_features": 20000,
+        "sublinear_tf": true
+      },
+      "model": "SVC",
+      "parameters": {
+        "C": 10.0
+      }
+    },
+    {
+      "candidate_id": "unigram_20k_sublinear__LogisticRegression__C_0.1",
+      "feature_config": {
+        "config_id": "unigram_20k_sublinear",
+        "max_features": 20000,
+        "sublinear_tf": true
+      },
+      "model": "LogisticRegression",
+      "parameters": {
+        "C": 0.1
+      }
+    },
+    {
+      "candidate_id": "unigram_20k_sublinear__LogisticRegression__C_1",
+      "feature_config": {
+        "config_id": "unigram_20k_sublinear",
+        "max_features": 20000,
+        "sublinear_tf": true
+      },
+      "model": "LogisticRegression",
+      "parameters": {
+        "C": 1.0
+      }
+    },
+    {
+      "candidate_id": "unigram_20k_sublinear__LogisticRegression__C_10",
+      "feature_config": {
+        "config_id": "unigram_20k_sublinear",
+        "max_features": 20000,
+        "sublinear_tf": true
+      },
+      "model": "LogisticRegression",
+      "parameters": {
+        "C": 10.0
+      }
+    },
+    {
+      "candidate_id": "unigram_20k_sublinear__LogisticRegression__C_20",
+      "feature_config": {
+        "config_id": "unigram_20k_sublinear",
+        "max_features": 20000,
+        "sublinear_tf": true
+      },
+      "model": "LogisticRegression",
+      "parameters": {
+        "C": 20.0
+      }
+    }
+  ],
+  "pipeline_parameters": {
+    "unigram_5k__MultinomialNB__alpha_0.1": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 5000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": false,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__alpha": 0.1,
+      "classifier__class_prior": null,
+      "classifier__fit_prior": true,
+      "classifier__force_alpha": true
+    },
+    "unigram_5k__MultinomialNB__alpha_0.5": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 5000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": false,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__alpha": 0.5,
+      "classifier__class_prior": null,
+      "classifier__fit_prior": true,
+      "classifier__force_alpha": true
+    },
+    "unigram_5k__MultinomialNB__alpha_1": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 5000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": false,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__alpha": 1.0,
+      "classifier__class_prior": null,
+      "classifier__fit_prior": true,
+      "classifier__force_alpha": true
+    },
+    "unigram_5k__SVC__C_0.1": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 5000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": false,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 0.1,
+      "classifier__break_ties": false,
+      "classifier__cache_size": 200,
+      "classifier__class_weight": null,
+      "classifier__coef0": 0.0,
+      "classifier__decision_function_shape": "ovr",
+      "classifier__degree": 3,
+      "classifier__gamma": "scale",
+      "classifier__kernel": "linear",
+      "classifier__max_iter": -1,
+      "classifier__probability": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__shrinking": true,
+      "classifier__tol": 0.001,
+      "classifier__verbose": false
+    },
+    "unigram_5k__SVC__C_1": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 5000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": false,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 1.0,
+      "classifier__break_ties": false,
+      "classifier__cache_size": 200,
+      "classifier__class_weight": null,
+      "classifier__coef0": 0.0,
+      "classifier__decision_function_shape": "ovr",
+      "classifier__degree": 3,
+      "classifier__gamma": "scale",
+      "classifier__kernel": "linear",
+      "classifier__max_iter": -1,
+      "classifier__probability": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__shrinking": true,
+      "classifier__tol": 0.001,
+      "classifier__verbose": false
+    },
+    "unigram_5k__SVC__C_10": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 5000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": false,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 10.0,
+      "classifier__break_ties": false,
+      "classifier__cache_size": 200,
+      "classifier__class_weight": null,
+      "classifier__coef0": 0.0,
+      "classifier__decision_function_shape": "ovr",
+      "classifier__degree": 3,
+      "classifier__gamma": "scale",
+      "classifier__kernel": "linear",
+      "classifier__max_iter": -1,
+      "classifier__probability": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__shrinking": true,
+      "classifier__tol": 0.001,
+      "classifier__verbose": false
+    },
+    "unigram_5k__LogisticRegression__C_0.1": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 5000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": false,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 0.1,
+      "classifier__class_weight": null,
+      "classifier__dual": false,
+      "classifier__fit_intercept": true,
+      "classifier__intercept_scaling": 1,
+      "classifier__l1_ratio": 0.0,
+      "classifier__max_iter": 2000,
+      "classifier__n_jobs": null,
+      "classifier__penalty": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__solver": "lbfgs",
+      "classifier__tol": 0.0001,
+      "classifier__verbose": 0,
+      "classifier__warm_start": false
+    },
+    "unigram_5k__LogisticRegression__C_1": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 5000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": false,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 1.0,
+      "classifier__class_weight": null,
+      "classifier__dual": false,
+      "classifier__fit_intercept": true,
+      "classifier__intercept_scaling": 1,
+      "classifier__l1_ratio": 0.0,
+      "classifier__max_iter": 2000,
+      "classifier__n_jobs": null,
+      "classifier__penalty": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__solver": "lbfgs",
+      "classifier__tol": 0.0001,
+      "classifier__verbose": 0,
+      "classifier__warm_start": false
+    },
+    "unigram_5k__LogisticRegression__C_10": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 5000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": false,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 10.0,
+      "classifier__class_weight": null,
+      "classifier__dual": false,
+      "classifier__fit_intercept": true,
+      "classifier__intercept_scaling": 1,
+      "classifier__l1_ratio": 0.0,
+      "classifier__max_iter": 2000,
+      "classifier__n_jobs": null,
+      "classifier__penalty": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__solver": "lbfgs",
+      "classifier__tol": 0.0001,
+      "classifier__verbose": 0,
+      "classifier__warm_start": false
+    },
+    "unigram_5k__LogisticRegression__C_20": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 5000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": false,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 20.0,
+      "classifier__class_weight": null,
+      "classifier__dual": false,
+      "classifier__fit_intercept": true,
+      "classifier__intercept_scaling": 1,
+      "classifier__l1_ratio": 0.0,
+      "classifier__max_iter": 2000,
+      "classifier__n_jobs": null,
+      "classifier__penalty": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__solver": "lbfgs",
+      "classifier__tol": 0.0001,
+      "classifier__verbose": 0,
+      "classifier__warm_start": false
+    },
+    "unigram_20k__MultinomialNB__alpha_0.1": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 20000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": false,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__alpha": 0.1,
+      "classifier__class_prior": null,
+      "classifier__fit_prior": true,
+      "classifier__force_alpha": true
+    },
+    "unigram_20k__MultinomialNB__alpha_0.5": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 20000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": false,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__alpha": 0.5,
+      "classifier__class_prior": null,
+      "classifier__fit_prior": true,
+      "classifier__force_alpha": true
+    },
+    "unigram_20k__MultinomialNB__alpha_1": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 20000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": false,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__alpha": 1.0,
+      "classifier__class_prior": null,
+      "classifier__fit_prior": true,
+      "classifier__force_alpha": true
+    },
+    "unigram_20k__SVC__C_0.1": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 20000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": false,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 0.1,
+      "classifier__break_ties": false,
+      "classifier__cache_size": 200,
+      "classifier__class_weight": null,
+      "classifier__coef0": 0.0,
+      "classifier__decision_function_shape": "ovr",
+      "classifier__degree": 3,
+      "classifier__gamma": "scale",
+      "classifier__kernel": "linear",
+      "classifier__max_iter": -1,
+      "classifier__probability": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__shrinking": true,
+      "classifier__tol": 0.001,
+      "classifier__verbose": false
+    },
+    "unigram_20k__SVC__C_1": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 20000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": false,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 1.0,
+      "classifier__break_ties": false,
+      "classifier__cache_size": 200,
+      "classifier__class_weight": null,
+      "classifier__coef0": 0.0,
+      "classifier__decision_function_shape": "ovr",
+      "classifier__degree": 3,
+      "classifier__gamma": "scale",
+      "classifier__kernel": "linear",
+      "classifier__max_iter": -1,
+      "classifier__probability": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__shrinking": true,
+      "classifier__tol": 0.001,
+      "classifier__verbose": false
+    },
+    "unigram_20k__SVC__C_10": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 20000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": false,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 10.0,
+      "classifier__break_ties": false,
+      "classifier__cache_size": 200,
+      "classifier__class_weight": null,
+      "classifier__coef0": 0.0,
+      "classifier__decision_function_shape": "ovr",
+      "classifier__degree": 3,
+      "classifier__gamma": "scale",
+      "classifier__kernel": "linear",
+      "classifier__max_iter": -1,
+      "classifier__probability": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__shrinking": true,
+      "classifier__tol": 0.001,
+      "classifier__verbose": false
+    },
+    "unigram_20k__LogisticRegression__C_0.1": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 20000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": false,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 0.1,
+      "classifier__class_weight": null,
+      "classifier__dual": false,
+      "classifier__fit_intercept": true,
+      "classifier__intercept_scaling": 1,
+      "classifier__l1_ratio": 0.0,
+      "classifier__max_iter": 2000,
+      "classifier__n_jobs": null,
+      "classifier__penalty": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__solver": "lbfgs",
+      "classifier__tol": 0.0001,
+      "classifier__verbose": 0,
+      "classifier__warm_start": false
+    },
+    "unigram_20k__LogisticRegression__C_1": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 20000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": false,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 1.0,
+      "classifier__class_weight": null,
+      "classifier__dual": false,
+      "classifier__fit_intercept": true,
+      "classifier__intercept_scaling": 1,
+      "classifier__l1_ratio": 0.0,
+      "classifier__max_iter": 2000,
+      "classifier__n_jobs": null,
+      "classifier__penalty": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__solver": "lbfgs",
+      "classifier__tol": 0.0001,
+      "classifier__verbose": 0,
+      "classifier__warm_start": false
+    },
+    "unigram_20k__LogisticRegression__C_10": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 20000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": false,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 10.0,
+      "classifier__class_weight": null,
+      "classifier__dual": false,
+      "classifier__fit_intercept": true,
+      "classifier__intercept_scaling": 1,
+      "classifier__l1_ratio": 0.0,
+      "classifier__max_iter": 2000,
+      "classifier__n_jobs": null,
+      "classifier__penalty": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__solver": "lbfgs",
+      "classifier__tol": 0.0001,
+      "classifier__verbose": 0,
+      "classifier__warm_start": false
+    },
+    "unigram_20k__LogisticRegression__C_20": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 20000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": false,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 20.0,
+      "classifier__class_weight": null,
+      "classifier__dual": false,
+      "classifier__fit_intercept": true,
+      "classifier__intercept_scaling": 1,
+      "classifier__l1_ratio": 0.0,
+      "classifier__max_iter": 2000,
+      "classifier__n_jobs": null,
+      "classifier__penalty": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__solver": "lbfgs",
+      "classifier__tol": 0.0001,
+      "classifier__verbose": 0,
+      "classifier__warm_start": false
+    },
+    "unigram_20k_sublinear__MultinomialNB__alpha_0.1": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 20000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": true,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__alpha": 0.1,
+      "classifier__class_prior": null,
+      "classifier__fit_prior": true,
+      "classifier__force_alpha": true
+    },
+    "unigram_20k_sublinear__MultinomialNB__alpha_0.5": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 20000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": true,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__alpha": 0.5,
+      "classifier__class_prior": null,
+      "classifier__fit_prior": true,
+      "classifier__force_alpha": true
+    },
+    "unigram_20k_sublinear__MultinomialNB__alpha_1": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 20000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": true,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__alpha": 1.0,
+      "classifier__class_prior": null,
+      "classifier__fit_prior": true,
+      "classifier__force_alpha": true
+    },
+    "unigram_20k_sublinear__SVC__C_0.1": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 20000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": true,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 0.1,
+      "classifier__break_ties": false,
+      "classifier__cache_size": 200,
+      "classifier__class_weight": null,
+      "classifier__coef0": 0.0,
+      "classifier__decision_function_shape": "ovr",
+      "classifier__degree": 3,
+      "classifier__gamma": "scale",
+      "classifier__kernel": "linear",
+      "classifier__max_iter": -1,
+      "classifier__probability": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__shrinking": true,
+      "classifier__tol": 0.001,
+      "classifier__verbose": false
+    },
+    "unigram_20k_sublinear__SVC__C_1": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 20000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": true,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 1.0,
+      "classifier__break_ties": false,
+      "classifier__cache_size": 200,
+      "classifier__class_weight": null,
+      "classifier__coef0": 0.0,
+      "classifier__decision_function_shape": "ovr",
+      "classifier__degree": 3,
+      "classifier__gamma": "scale",
+      "classifier__kernel": "linear",
+      "classifier__max_iter": -1,
+      "classifier__probability": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__shrinking": true,
+      "classifier__tol": 0.001,
+      "classifier__verbose": false
+    },
+    "unigram_20k_sublinear__SVC__C_10": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 20000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": true,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 10.0,
+      "classifier__break_ties": false,
+      "classifier__cache_size": 200,
+      "classifier__class_weight": null,
+      "classifier__coef0": 0.0,
+      "classifier__decision_function_shape": "ovr",
+      "classifier__degree": 3,
+      "classifier__gamma": "scale",
+      "classifier__kernel": "linear",
+      "classifier__max_iter": -1,
+      "classifier__probability": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__shrinking": true,
+      "classifier__tol": 0.001,
+      "classifier__verbose": false
+    },
+    "unigram_20k_sublinear__LogisticRegression__C_0.1": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 20000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": true,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 0.1,
+      "classifier__class_weight": null,
+      "classifier__dual": false,
+      "classifier__fit_intercept": true,
+      "classifier__intercept_scaling": 1,
+      "classifier__l1_ratio": 0.0,
+      "classifier__max_iter": 2000,
+      "classifier__n_jobs": null,
+      "classifier__penalty": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__solver": "lbfgs",
+      "classifier__tol": 0.0001,
+      "classifier__verbose": 0,
+      "classifier__warm_start": false
+    },
+    "unigram_20k_sublinear__LogisticRegression__C_1": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 20000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": true,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 1.0,
+      "classifier__class_weight": null,
+      "classifier__dual": false,
+      "classifier__fit_intercept": true,
+      "classifier__intercept_scaling": 1,
+      "classifier__l1_ratio": 0.0,
+      "classifier__max_iter": 2000,
+      "classifier__n_jobs": null,
+      "classifier__penalty": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__solver": "lbfgs",
+      "classifier__tol": 0.0001,
+      "classifier__verbose": 0,
+      "classifier__warm_start": false
+    },
+    "unigram_20k_sublinear__LogisticRegression__C_10": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 20000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": true,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 10.0,
+      "classifier__class_weight": null,
+      "classifier__dual": false,
+      "classifier__fit_intercept": true,
+      "classifier__intercept_scaling": 1,
+      "classifier__l1_ratio": 0.0,
+      "classifier__max_iter": 2000,
+      "classifier__n_jobs": null,
+      "classifier__penalty": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__solver": "lbfgs",
+      "classifier__tol": 0.0001,
+      "classifier__verbose": 0,
+      "classifier__warm_start": false
+    },
+    "unigram_20k_sublinear__LogisticRegression__C_20": {
+      "tfidf__analyzer": "word",
+      "tfidf__binary": false,
+      "tfidf__decode_error": "strict",
+      "tfidf__dtype": "numpy.float64",
+      "tfidf__encoding": "utf-8",
+      "tfidf__input": "content",
+      "tfidf__lowercase": true,
+      "tfidf__max_df": 1.0,
+      "tfidf__max_features": 20000,
+      "tfidf__min_df": 1,
+      "tfidf__ngram_range": [
+        1,
+        1
+      ],
+      "tfidf__norm": "l2",
+      "tfidf__preprocessor": null,
+      "tfidf__smooth_idf": true,
+      "tfidf__stop_words": null,
+      "tfidf__strip_accents": null,
+      "tfidf__sublinear_tf": true,
+      "tfidf__token_pattern": "(?u)\\b\\w\\w+\\b",
+      "tfidf__tokenizer": null,
+      "tfidf__use_idf": true,
+      "tfidf__vocabulary": null,
+      "classifier__C": 20.0,
+      "classifier__class_weight": null,
+      "classifier__dual": false,
+      "classifier__fit_intercept": true,
+      "classifier__intercept_scaling": 1,
+      "classifier__l1_ratio": 0.0,
+      "classifier__max_iter": 2000,
+      "classifier__n_jobs": null,
+      "classifier__penalty": "deprecated",
+      "classifier__random_state": 42,
+      "classifier__solver": "lbfgs",
+      "classifier__tol": 0.0001,
+      "classifier__verbose": 0,
+      "classifier__warm_start": false
+    }
+  },
+  "environment": {
+    "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "platform": "Linux-7.2.9-arch1-1-x86_64-with-glibc2.44",
+    "machine": "x86_64",
+    "processor": "",
+    "cpu_count": 20,
+    "packages": {
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "matplotlib": "3.11.2",
+      "joblib": "1.6.0"
+    }
+  },
+  "comparison_completed_at_utc": "2026-10-13T08:46:32.198405+00:00",
+  "selected_config_sha256": "de02824e9c49d90f27a487898e11914b6c9dd88e60641d9ce139d63df0c90cd3"
+}

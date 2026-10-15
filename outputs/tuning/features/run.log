@@ -1,0 +1,13 @@
+2026-10-13 16:50:33,208 INFO Candidate 1/6: features__word_1_1_30k_sublinear__LogisticRegression__C_30
+2026-10-13 16:50:48,904 INFO Macro-F1 0.9399 ± 0.0071; Accuracy 0.9396
+2026-10-13 16:50:48,904 INFO Candidate 2/6: features__word_1_1_50k_sublinear__LogisticRegression__C_30
+2026-10-13 16:51:07,461 INFO Macro-F1 0.9411 ± 0.0059; Accuracy 0.9408
+2026-10-13 16:51:07,461 INFO Candidate 3/6: features__word_1_1_all_sublinear__LogisticRegression__C_30
+2026-10-13 16:51:32,412 INFO Macro-F1 0.9409 ± 0.0062; Accuracy 0.9407
+2026-10-13 16:51:32,412 INFO Candidate 4/6: features__word_1_1_50k_min2_sublinear__LogisticRegression__C_30
+2026-10-13 16:51:49,542 INFO Macro-F1 0.9404 ± 0.0077; Accuracy 0.9401
+2026-10-13 16:51:49,542 INFO Candidate 5/6: features__word_1_2_30k_min2_sublinear__LogisticRegression__C_30
+2026-10-13 16:52:18,610 INFO Macro-F1 0.9341 ± 0.0078; Accuracy 0.9338
+2026-10-13 16:52:18,610 INFO Candidate 6/6: features__word_1_2_50k_min2_sublinear__LogisticRegression__C_30
+2026-10-13 16:52:52,503 INFO Macro-F1 0.9377 ± 0.0080; Accuracy 0.9374
+2026-10-13 16:52:52,508 INFO Tuning round completed: features

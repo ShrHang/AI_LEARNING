@@ -1,0 +1,32 @@
+{
+  "candidate": {
+    "candidate_id": "unigram_20k_sublinear__LogisticRegression__C_20",
+    "feature_config": {
+      "config_id": "unigram_20k_sublinear",
+      "max_features": 20000,
+      "sublinear_tf": true
+    },
+    "model": "LogisticRegression",
+    "parameters": {
+      "C": 20.0
+    }
+  },
+  "selection_rule": "highest macro_f1_mean, then lowest macro_f1_std, then candidate_id",
+  "cv_metrics": {
+    "candidate_id": "unigram_20k_sublinear__LogisticRegression__C_20",
+    "config_id": "unigram_20k_sublinear",
+    "model": "LogisticRegression",
+    "parameters": "{\"C\": 20.0}",
+    "max_features": 20000,
+    "sublinear_tf": true,
+    "wall_time_seconds": 12.578311602999747,
+    "fit_time_mean": 3.068756437301636,
+    "accuracy_mean": 0.9378405141483842,
+    "accuracy_std": 0.008709306252021697,
+    "train_accuracy_mean": 0.9998642745040816,
+    "macro_f1_mean": 0.9381089091145783,
+    "macro_f1_std": 0.008670915957464281,
+    "train_macro_f1_mean": 0.9998644637485361
+  },
+  "evaluation_note": "Used for model selection; not an independent test estimate."
+}
