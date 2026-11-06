@@ -1,0 +1,54 @@
+{
+  "tree_structure": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "value": 3
+              },
+              {
+                "value": 5
+              }
+            ]
+          },
+          {
+            "children": [
+              {
+                "value": 6
+              },
+              {
+                "value": 9
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "value": 6
+              },
+              {
+                "value": 9
+              }
+            ]
+          },
+          {
+            "children": [
+              {
+                "value": 1
+              },
+              {
+                "value": 2
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "python": "3.14.9",
+  "platform": "Linux-7.2.14-arch1-1-x86_64-with-glibc2.44",
+  "processor": "",
+  "seed": 20261107,
+  "map_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "repeats": 21,
+  "batch": 20,
+  "warmup": 1,
+  "timing": "perf_counter_ns; microseconds per call, median of batch means",
+  "tree_ideal": "Oracle subtree-value ordering: timing includes ordering; node count excludes oracle preprocessing.",
+  "astar_tie": "f, h, insertion order; expanded includes popped goal, skips stale entries"
+}
