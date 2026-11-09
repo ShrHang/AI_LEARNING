@@ -1,1 +1,1 @@
-"""Search algorithms for the contemporary AI laboratory, experiment 2."""
+"""当代人工智能实验二：搜索算法。"""

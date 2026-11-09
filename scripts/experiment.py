@@ -1,4 +1,4 @@
-"""Generate reproducible sample outputs and comparison measurements (stdlib only)."""
+"""生成可复现的样例输出与对照实验数据，仅使用 Python 标准库。"""
 from __future__ import annotations
 import argparse
 import csv
@@ -24,7 +24,7 @@ def distance_matrix():
 
 
 def measure(fn, repeats, batch):
-    """One unmeasured warm-up; each sample is mean microseconds/call in a batch."""
+    """先预热一次，再记录每批的平均单次耗时，单位为微秒。"""
     result = fn()
     raw = []
     for _ in range(repeats):
@@ -39,7 +39,7 @@ def generated_map(seed, size=40):
     rng = random.Random(seed)
     grid = [[('X' if rng.random() < .23 else 1) for _ in range(size)]
             for _ in range(size)]
-    # Preserve a guaranteed corridor so both heuristics solve the same reachable task.
+    # 保留一条通路，让两种启发函数在同一张可达地图上比较。
     for i in range(size):
         grid[0][i] = grid[i][-1] = 1
     return grid
@@ -94,7 +94,7 @@ def run(out: Path, repeats=21, batch=20):
                        lambda d=depth, a=algorithm, o=order:
                        treasure_search(matrix, VALUES, depth=d, algorithm=a, order=o))
 
-    # Depth/branching extension: a deterministic larger tree, independent of the map.
+    # 用一棵独立于地图、可复现的大树对比搜索开销。
     from searchlab.games import TreeNode
     rng = random.Random(20261107)
     def build(depth):

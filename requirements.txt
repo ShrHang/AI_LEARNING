@@ -1,2 +1,3 @@
+# 给 scripts/plot_results.py 用的画图库
 matplotlib>=3.9,<4
 Pillow>=11,<14

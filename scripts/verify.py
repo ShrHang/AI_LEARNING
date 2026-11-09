@@ -1,8 +1,6 @@
-"""Independent checks for the algorithms (standard library only).
+"""用独立的参考实现核验算法，仅使用 Python 标准库。
 
-Run from any directory with ``python scripts/verify.py``. The reference
-implementations deliberately do not reuse A* estimates, game transitions,
-or alpha-beta traversal. No files are written.
+在项目根目录运行 ``python scripts/verify.py``，参考实现独立计算路径代价、博弈状态和结果。
 """
 
 from __future__ import annotations
@@ -23,7 +21,7 @@ from searchlab.pathfinding import astar, maze_path, weighted_cost
 
 
 def entry(cell: int | str) -> int:
-    """Reference map interpretation, independent of the implementation."""
+    """按题目规则独立计算地图格子的进入代价。"""
     return int(cell) if isinstance(cell, int) or str(cell).isdigit() else 1
 
 
@@ -125,13 +123,13 @@ def verify_trees(rng: Random) -> int:
 
 
 def exhaustive_treasure_values(distances, values, depth):
-    """Enumerate every move sequence, then collapse the prefix table bottom-up.
+    """枚举所有行动序列，再自底向上合并相同前缀的结果。
 
-    This uses permutations rather than the production recursive game engine.
-    Each terminal score is recomputed directly from its complete sequence.
+    用排列生成完整行动序列，并直接根据序列重新计算每个终局的收益。
     """
     depth = min(depth, len(values))
     table = {}
+    roots: dict[str, int] = {}
     for moves in permutations(values, depth):
         positions = ["A", "B"]
         scores = [0, 0]
@@ -175,6 +173,7 @@ def verify_treasures(rng: Random) -> int:
                 for order in ("natural", "reverse", "greedy"):
                     actual = treasure_search(matrix, values, depth=depth, algorithm=algorithm, order=order)
                     assert actual.value == expected, ("treasure value", index, depth, algorithm, order, expected, actual)
+                    assert actual.target is not None, ("treasure root choice", roots, actual)
                     assert roots[actual.target] == expected, ("treasure root choice", roots, actual)
                     assert actual.visited <= baseline.visited
                     count += 1

@@ -1,4 +1,4 @@
-"""Official grids and treasure values transcribed from the assignment PDF."""
+"""实验题目给出的地图和宝藏价值。"""
 
 
 MAZE = [
@@ -27,7 +27,7 @@ TREASURE_GRID = [
     ["T4", 1, 1, "X", 1, 1, "B"],
 ]
 
-# Insertion order is also the printed distance-matrix order.
+# 按插入顺序输出距离矩阵的行和列。
 POSITIONS = {
     "A": (0, 0),
     "B": (6, 6),

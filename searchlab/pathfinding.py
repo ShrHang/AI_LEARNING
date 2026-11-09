@@ -1,12 +1,13 @@
-"""Four-direction A* for unit-cost mazes and weighted terrain."""
+"""用于单位代价迷宫和加权地形的四方向 A* 搜索。"""
 
+from collections.abc import Sequence
 from dataclasses import dataclass
 from heapq import heappop, heappush
 from itertools import count
 
 
 Position = tuple[int, int]
-Grid = list[list[int | str]]
+Grid = Sequence[Sequence[int | str]]
 
 
 @dataclass
@@ -36,17 +37,16 @@ def astar(
     heuristic: str = "manhattan",
     goal_cost: int | None = None,
 ) -> SearchResult:
-    """Return an optimal path, its entry cost, and search counters.
+    """返回最优路径、累计进入代价和搜索计数。
 
-    The start initially costs zero. Special labels normally cost one to
-    enter; ``goal_cost=0`` implements question 2's free terminal square.
-    ``expanded`` counts valid heap pops, including the goal; ``generated``
-    counts heap pushes, including the start. Stale heap entries count in
-    neither expansions nor neighbor processing.
+    起点的初始代价为 0。进入特殊标记格的默认代价为 1，设置
+    ``goal_cost=0`` 可实现题二的免费终点。
+    ``expanded`` 统计有效出堆次数（含终点），``generated`` 统计
+    入堆次数（含起点）。过期条目出堆后直接跳过。
 
-    Manhattan is scaled by the smallest non-goal entry cost. If entering
-    the goal is cheaper, its final step receives that cheaper lower bound.
-    Thus a free goal uses max(Manhattan - 1, 0) * minimum_cost.
+    用非终点格的最小进入代价缩放曼哈顿距离。若终点进入代价更低，
+    最后一步用较低的代价作为下界。终点免费时，启发值为
+    max(曼哈顿距离 - 1, 0) * minimum_cost。
     """
     if heuristic not in ("zero", "manhattan"):
         raise ValueError("heuristic must be 'zero' or 'manhattan'")
@@ -57,7 +57,9 @@ def astar(
     rows, cols = len(grid), len(grid[0])
     if any(len(row) != cols for row in grid):
         raise ValueError("grid must be rectangular")
-    start, goal = tuple(start), tuple(goal)
+    start_row, start_col = start
+    goal_row, goal_col = goal
+    start, goal = (start_row, start_col), (goal_row, goal_col)
     for row, col in (start, goal):
         if not (0 <= row < rows and 0 <= col < cols) or grid[row][col] == "X":
             return SearchResult([], -1, 0, 0)
@@ -98,7 +100,7 @@ def astar(
             return SearchResult(path, current_g, expanded, generated)
 
         row, col = current
-        # Fixed order plus f/h/insertion tie-breaking makes runs reproducible.
+        # 固定邻居遍历顺序，堆按 f、h 和入堆顺序排序，便于复现结果。
         for neighbor in ((row - 1, col), (row, col + 1), (row + 1, col), (row, col - 1)):
             if neighbor not in terrain:
                 continue
@@ -114,10 +116,10 @@ def astar(
 
 
 def maze_path(start: Position, goal: Position, grid: Grid) -> list[Position]:
-    """Question 1: include both endpoints, or return [] when unreachable."""
+    """题一：路径包含起点和终点，无解时返回空列表。"""
     return astar(grid, start, goal).path
 
 
 def weighted_cost(start: Position, goal: Position, grid: Grid) -> int:
-    """Question 2: the designated terminal square is free to enter."""
+    """题二：进入指定终点的代价为 0。"""
     return astar(grid, start, goal, goal_cost=0).cost

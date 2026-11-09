@@ -1,6 +1,6 @@
-"""Run: python -m searchlab demo | maze | weighted | tree | treasure.
+"""运行命令：python -m searchlab demo | maze | weighted | tree | treasure。
 
-Custom inputs are JSON read from --input FILE (or - for stdin).
+用 --input FILE 读取自定义 JSON，也可用 --input - 从标准输入读取。
 """
 from __future__ import annotations
 import argparse
@@ -33,10 +33,13 @@ def main():
         else:
             with open(args.input, encoding='utf-8') as f:
                 data = json.load(f)
-    if args.task == 'maze':
-        result = maze_path(tuple(data.get('start', (0, 0))), tuple(data.get('goal', (3, 4))), data.get('grid', MAZE))
-    elif args.task == 'weighted':
-        result = weighted_cost(tuple(data.get('start', (0, 0))), tuple(data.get('goal', (4, 4))), data.get('grid', WEIGHTED))
+    if args.task in ('maze', 'weighted'):
+        is_maze = args.task == 'maze'
+        start_row, start_col = data.get('start', (0, 0))
+        goal_row, goal_col = data.get('goal', (3, 4) if is_maze else (4, 4))
+        grid = data.get('grid', MAZE if is_maze else WEIGHTED)
+        solve = maze_path if is_maze else weighted_cost
+        result = solve((start_row, start_col), (goal_row, goal_col), grid)
     elif args.task == 'tree':
         result = tree_search(tree_from_dict(data) if data else sample_tree(), algorithm=args.algorithm).value
     elif args.task == 'treasure':

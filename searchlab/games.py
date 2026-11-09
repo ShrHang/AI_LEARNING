@@ -1,8 +1,7 @@
-"""Minimax and alpha-beta search for trees and the treasure game.
+"""对博弈树和宝藏分配问题进行 Minimax 与 Alpha-beta 搜索。
 
-Counters describe the recursive search: ``visited`` includes the root,
-``leaves`` counts evaluated terminal/depth-limit states, and ``cutoffs``
-counts a pruning event only when at least one sibling is skipped.
+``visited`` 统计访问次数（含根节点），``leaves`` 统计终局或达到深度
+上限时的求值次数。每次实际跳过至少一个兄弟分支，``cutoffs`` 加一。
 """
 
 from dataclasses import dataclass, field
@@ -30,7 +29,7 @@ class GameResult:
 
 
 def sample_tree() -> TreeNode:
-    """The official example; the middle MAX subtree is visited in both branches."""
+    """题目样例，两个分支共用中间的 MAX 子树。"""
     max1 = TreeNode(children=[TreeNode(3), TreeNode(5)])
     max2 = TreeNode(children=[TreeNode(6), TreeNode(9)])
     max3 = TreeNode(children=[TreeNode(1), TreeNode(2)])
@@ -41,10 +40,10 @@ def sample_tree() -> TreeNode:
 
 
 def tree_from_dict(data: dict[str, Any]) -> TreeNode:
-    """Read the example JSON (with or without its tree_structure wrapper).
+    """读取样例 JSON，可带或不带外层 tree_structure 字段。
 
-    Roles alternate from a MAX root, as prescribed in the assignment.
-    JSON is_maximizing_player annotations are therefore redundant.
+    按题意从 MAX 根节点开始交替行动，因此无需读取 JSON 中的
+    is_maximizing_player 字段。
     """
     node = data.get("tree_structure", data)
     return TreeNode(
@@ -56,12 +55,10 @@ def tree_from_dict(data: dict[str, Any]) -> TreeNode:
 def tree_search(
     root: TreeNode, *, algorithm: str = "alphabeta", order: str = "natural"
 ) -> GameResult:
-    """Return the MAX root's value.
+    """返回 MAX 根节点的最优得分。
 
-    ``ideal`` uses exact subtree minimax values as an oracle. It illustrates
-    best-case ordering, not a usable free optimization: the preprocessing
-    visits are excluded from result counters. Timing the whole function
-    includes that preprocessing cost.
+    ``ideal`` 用预先求得的精确子树值排序，用于观察理想排序的剪枝效果。
+    搜索计数不含预处理时访问的节点，整个函数的计时包含这部分开销。
     """
     if algorithm not in {"minimax", "alphabeta"}:
         raise ValueError("algorithm must be minimax or alphabeta")
@@ -138,7 +135,7 @@ def treasure_move(
     distances: dict[str, dict[str, int]],
     values: dict[str, int],
 ) -> TreasureState:
-    """Apply one chosen treasure; passing other treasures never collects them."""
+    """更新选取目标宝藏后的状态。途经其他宝藏时不自动收集。"""
     remaining = tuple(label for label in state.remaining if label != target)
     if state.player == "A":
         gain = values[target] - distances[state.position_a][target]
@@ -181,7 +178,7 @@ def _treasure_search(
         if order == "reverse":
             targets.reverse()
         elif order == "greedy":
-            # Each player first tries their own greatest immediate gain.
+            # 优先尝试当前玩家即时收益最高的宝藏。
             targets.sort(
                 key=lambda label: values[label] - distances[position][label],
                 reverse=True,
@@ -215,11 +212,10 @@ def treasure_search(
     algorithm: str = "alphabeta",
     order: str = "natural",
 ) -> GameResult:
-    """Search from A's first turn; depth counts individual player moves.
+    """从 A 的第一步开始搜索，每次玩家行动消耗一层深度。
 
-    Equal-valued choices keep the first encountered target. Unreachable
-    treasures are not legal moves; a player with no legal move ends search.
-    All official-map treasures are mutually reachable.
+    最优值相同时保留最先访问的目标。不可达的宝藏不能选取，若当前
+    玩家没有合法行动则结束搜索。题目地图中的宝藏均可互相到达。
     """
     if depth < 0:
         raise ValueError("depth must be nonnegative")
@@ -236,10 +232,9 @@ def treasure_search(
 def treasure_root_values(
     distances: dict[str, dict[str, int]], values: dict[str, int], depth: int
 ) -> dict[str, int]:
-    """Evaluate each root move independently, with an exact minimax search.
+    """用完整的 Minimax 搜索独立计算每个首步的精确值。
 
-    Alpha-beta bounds from an earlier root sibling are deliberately not reused:
-    these numbers must be exact values, not fail-low/fail-high bounds.
+    各首步独立求值，避免将 Alpha-beta 剪枝返回的上界或下界当作精确值。
     """
     if depth < 1:
         return {}
