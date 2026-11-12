@@ -1,88 +1,59 @@
 # 实验二：搜索算法
 
-实现四方向A*Minimax与Alpha-beta算法，完成迷宫、加权地形、博弈树和宝藏分配四题。
+用 A* 求解迷宫和加权地形，用 Minimax 与 Alpha-beta 搜索博弈树。宝藏分配题先用 A* 计算移动代价，再用博弈搜索选择首步。
 
-## 快速运行
+## 代码结构
 
-算法、命令行、核验和实验脚本仅依赖 **Python 3.10+ 标准库**，无需安装第三方库。在项目根目录执行：
+| 路径 | 用途 |
+| --- | --- |
+| `searchlab/pathfinding.py` | A*、迷宫寻路和加权地形接口 |
+| `searchlab/games.py` | Minimax、Alpha-beta 和宝藏博弈 |
+| `searchlab/examples.py` | 内置地图、关键位置和宝藏价值 |
+| `examples/` | 可传给命令行的 JSON 样例 |
+| `scripts/` | 正确性核验、性能实验和结果绘图 |
+| `results/` | 实验数据与图表 |
 
-```bash
-python3 -m searchlab demo
-python3 scripts/verify.py
-```
+## 运行样例
 
-根目录下的`requirements.txt`仅用于结果绘图，可以不安装。
-
-## 各题输入输出
-
-```bash
-python3 -m searchlab maze --input examples/maze.json
-python3 -m searchlab weighted --input examples/weighted.json
-python3 -m searchlab tree --input examples/tree.json
-python3 -m searchlab treasure --depth 2 --algorithm minimax
-python3 -m searchlab treasure --depth 4 --algorithm alphabeta
-```
-
-前三题可通过 `--input -` 从标准输入读取 JSON；不传 `--input` 则运行内置样例。
-
-Python 接口：
-
-```python
-from searchlab.pathfinding import astar, maze_path, weighted_cost
-from searchlab.games import TreeNode, tree_search, treasure_search
-
-path = maze_path((0, 0), (3, 4), grid)
-cost = weighted_cost((0, 0), (4, 4), weighted_grid)
-result = astar(grid, (0, 0), (3, 4), heuristic="manhattan")
-# result.path / result.cost / result.expanded / result.generated
-value = tree_search(root, algorithm="alphabeta", order="natural").value
-```
-
-树排序支持 `natural / reverse / ideal`；宝藏排序支持 `natural / reverse / greedy`。宝藏状态显式保存双方位置、剩余宝藏、累计收益和行动玩家。
-
-## 规则
-
-- 题一移动一格代价1，起点初始代价0。
-- **题二终点进入代价为0**。采用 `h(n)=max(曼哈顿距离-1,0)×最小非终点格代价`；普通曼哈顿距离在终点邻格可能高估。
-- 通用 A* 默认标签进入代价1，可通过 `goal_cost=0` 启用免费终点。非负权允许为0；最小代价为0时启发函数自然退化。
-- 题四 A、B、T 格进入代价均为1，经过宝藏不自动收集，玩家不阻挡。
-- 题四四回合强制各取两件，允许负收益。`H` 按单次行动计数，叶子评价为当前 `Score_A-Score_B`。
-- 同值首步保留当前顺序中最先遇到者；排序可能改变同值选择，但不改变最优收益差。
-
-## 验证与复现实验
+在项目根目录使用 **Python 3.10+**。算法、核验和性能实验只用标准库。
 
 ```bash
-python3 scripts/verify.py
-python3 scripts/experiment.py
+python -m searchlab demo
 ```
 
-核验脚本只验证：独立 Dijkstra 对照随机地图，完整递归对照随机树，全排列与自底向上折叠对照宝藏博弈。固定种子 `20261107`。
-
-实验生成：
-
-- `results/samples.json`：路径、距离矩阵、官方结果与各首步精确值。
-- `results/measurements.csv`：48组算法与策略对照、节点数、耗时摘要。
-- `results/timings.csv`：1008条原始计时样本。
-- `results/environment.json`：Python、平台、种子、采样参数与统计说明。
-
-默认一次预热，21组采样，每组20次，记录每次调用的平均微秒数，再取组间中位数。可用 `--repeats 21 --batch 20 --out results` 调整。耗时包含函数内的地图预处理与排序；小样例树还包含样例树构造，比较只针对相同场景。墙钟时间会随环境变化，最优值与节点数在固定输入/策略下确定。
-
-## 结果绘图
+也可以单独运行各题：
 
 ```bash
-python -m pip install -r requirements.txt
+python -m searchlab maze --input examples/maze.json
+python -m searchlab weighted --input examples/weighted.json
+python -m searchlab tree --input examples/tree.json
+python -m searchlab treasure --depth 2 --algorithm minimax
+python -m searchlab treasure --depth 4 --algorithm alphabeta
+```
+
+前三题省略 `--input` 时使用内置样例，也可以用 `--input -` 从标准输入读取 JSON。宝藏题使用内置地图。
+
+## 复现实验
+
+```bash
+python scripts/verify.py
+python scripts/experiment.py
+```
+
+`verify.py` 使用固定随机种子和独立参考算法核对结果。`experiment.py` 默认写入 `results/`，可用 `--out` 指定其他输出目录。默认每种配置预热一次，再计时 21 组，每组调用 20 次，可用 `--repeats` 和 `--batch` 调整。固定输入和配置下，搜索结果与节点数可以复现，耗时会随运行环境变化。
+
+| 输出文件 | 内容 |
+| --- | --- |
+| `results/samples.json` | 样例路径、代价、距离矩阵和博弈结果 |
+| `results/measurements.csv` | 各配置的搜索计数和耗时汇总 |
+| `results/timings.csv` | 每组计时记录 |
+| `results/environment.json` | 运行环境、随机种子和计时参数 |
+
+生成图表时，需要先安装 `requirements.txt` 中的包：
+
+```bash
+pip install -r requirements.txt
 python scripts/plot_results.py
 ```
 
-绘图脚本会查找能显示全部中文标签的系统字体。找不到时，四张图统一使用英文标签。
-
-
-## 文件结构
-
-```text
-searchlab/          算法、地图与命令行
-examples/           可直接输入的JSON样例
-scripts/            核验、实验与结果绘图
-results/            实验数据与图表
-requirements.txt    绘图依赖
-```
+图表写入 `results/figures/`。如果系统字体无法显示全部中文标签，脚本会使用英文标签。
